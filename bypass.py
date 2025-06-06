@@ -47,3 +47,4 @@ def main():
     while True:
         entrada = input(f"{verde}$:{reset} ").lower().strip()
         if entrada == "sair":
+         break
