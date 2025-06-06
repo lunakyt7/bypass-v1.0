@@ -23,7 +23,7 @@ titulo = f"""{verde}
 respostas = {
     "ativar": f"{verde}Bypass ativo com sucesso. Reinicie seu aparelho.{reset}",
     "limpar": f"{amarelo}Logs do cheat limpada com sucesso.{reset}",
-    "key": f"{azul}Voce está usando o plano semanal, encerra em 7d {reset}",
+    "key": f"{azul}Você está usando o plano semanal, encerra em 7d {reset}",
 }
 
 # Lista de comandos disponíveis
@@ -47,4 +47,12 @@ def main():
     while True:
         entrada = input(f"{verde}$:{reset} ").lower().strip()
         if entrada == "sair":
-         break
+            break
+        elif entrada in respostas:
+            print(respostas[entrada])
+        else:
+            print(f"{vermelho}Comando desconhecido. Tente novamente.{reset}")
+
+# Executar o programa
+if __name__ == "__main__":
+    main()
